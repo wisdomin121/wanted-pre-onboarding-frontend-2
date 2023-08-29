@@ -1,10 +1,12 @@
 import { styled } from 'styled-components'
 
 import { PageRouter } from 'pages'
+import { Header } from 'components'
 
 function App() {
   return (
     <CommonLayout>
+      <Header />
       <PageRouter />
     </CommonLayout>
   )
@@ -12,7 +14,6 @@ function App() {
 
 const CommonLayout = styled.div`
   width: 100%;
-  background-color: pink;
 
   @media screen and (min-width: 426px) {
     max-width: 425px;

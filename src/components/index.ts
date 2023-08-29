@@ -1,5 +1,6 @@
 // common
 export { default as Button } from './common/Button/Button'
+export { default as Header } from './common/Header'
 
 // IssueDetail
 export { default as IssueDetailContent } from './IssueDetail/IssueDetailContent'
