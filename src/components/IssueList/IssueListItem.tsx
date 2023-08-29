@@ -1,7 +1,7 @@
 import { StyledItem, StyledLeft, StyledRegularP, StyledSmallP } from './IssueListItem.styled'
 import { ReactComponent as Comments } from 'assets/Comments.svg'
 
-interface IssueProps {
+interface ItemProps {
   issueNumber: number
   issueTitle: string
   author: string
@@ -9,7 +9,7 @@ interface IssueProps {
   comments: number
 }
 
-function IssueListItem({ issueNumber, issueTitle, author, date, comments }: IssueProps) {
+function IssueListItem({ issueNumber, issueTitle, author, date, comments }: ItemProps) {
   return (
     <StyledItem>
       <StyledLeft>
