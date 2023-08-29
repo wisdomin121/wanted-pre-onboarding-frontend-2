@@ -31,10 +31,10 @@ export const StyledRegularP = styled.p`
   color: #333835;
 `
 
-export const StyledSmallP = styled.p<{ isComment: boolean }>`
+export const StyledSmallP = styled.p<{ $isComment: boolean }>`
   display: flex;
   align-items: center;
-  margin: ${({ isComment }) => (isComment ? '0 0 0 auto' : '0')};
+  margin: ${({ $isComment }) => ($isComment ? '0 0 0 auto' : '0')};
   font-size: 12px;
   text-align: start;
   color: #807f7d;

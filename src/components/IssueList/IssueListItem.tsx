@@ -15,11 +15,11 @@ function IssueListItem({ issueNumber, issueTitle, author, date, comments }: Issu
       <StyledLeft>
         <StyledRegularP>#{issueNumber}</StyledRegularP>
         <StyledRegularP>{issueTitle}</StyledRegularP>
-        <StyledSmallP isComment={false}>
+        <StyledSmallP $isComment={false}>
           {author}, {date}
         </StyledSmallP>
       </StyledLeft>
-      <StyledSmallP isComment={true}>
+      <StyledSmallP $isComment={true}>
         <Comments width="16" height="16" /> {comments}
       </StyledSmallP>
     </StyledItem>
