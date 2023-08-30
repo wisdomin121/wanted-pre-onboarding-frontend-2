@@ -12,7 +12,7 @@ function IssueList() {
 
   return (
     <StyledList ref={scrollRef}>
-      {list.length !== 0 ? (
+      {list.length !== 0 &&
         list.map((item: Item, idx: number) => (
           <>
             {idx !== 0 && idx % 5 === 0 && (
@@ -35,10 +35,9 @@ function IssueList() {
               avatar={item.avatar}
             />
           </>
-        ))
-      ) : (
-        <Loading />
-      )}
+        ))}
+
+      <Loading />
     </StyledList>
   )
 }

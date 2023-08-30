@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 export const StyledList = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   height: calc(100vh - 56.22px);
   overflow: auto;
