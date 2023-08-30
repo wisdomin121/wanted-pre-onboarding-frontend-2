@@ -9,3 +9,8 @@ export const StyledList = styled.div`
     width: 0;
   }
 `
+
+export const StyledAd = styled.a`
+  padding: 18px 25px;
+  text-align: center;
+`
