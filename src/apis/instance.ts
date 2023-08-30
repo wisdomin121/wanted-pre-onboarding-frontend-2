@@ -9,6 +9,7 @@ export const API = axios.create({
   headers: {
     'Content-Type': 'application/vnd.github+json',
     Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`,
+    'Access-Control-Allow-Origin': '*',
   },
 })
 
