@@ -1,6 +1,5 @@
 import useContentStore from 'stores/useContentStore'
 import {
-  StyledDetailHeader,
   StyledAvatar,
   StyledIssueNumber,
   StyledIssueTitle,
@@ -12,7 +11,7 @@ function IssueDetailHeader() {
   const { data } = useContentStore()
 
   return (
-    <StyledDetailHeader>
+    <div>
       <StyledIssueNumber>#{data.issueNumber}</StyledIssueNumber>
       <StyledIssueTitle>{data.issueTitle}</StyledIssueTitle>
 
@@ -24,7 +23,7 @@ function IssueDetailHeader() {
           {data.author} opened this issue on {data.date} · {data.comments} comments
         </StyledAuthorDateComments>
       </StyledInfo>
-    </StyledDetailHeader>
+    </div>
   )
 }
 

@@ -9,7 +9,7 @@ export const StyledDetailPage = styled.div`
   background-color: white;
 
   @media screen and (min-width: 425px) {
-    max-width: 375px;
     right: calc((100% - 425px) / 2);
+    max-width: 375px;
   }
 `

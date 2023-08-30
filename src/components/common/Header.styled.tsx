@@ -19,8 +19,8 @@ export const StyledHeader = styled.div`
 export const StyledIconButton = styled.button`
   width: 24px;
   height: 24px;
-  background-color: #9b9bff;
   border: none;
+  background-color: #9b9bff;
   cursor: pointer;
 `
 

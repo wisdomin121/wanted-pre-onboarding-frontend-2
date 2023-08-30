@@ -1,7 +1,5 @@
 import { styled } from 'styled-components'
 
-export const StyledDetailHeader = styled.div``
-
 export const StyledIssueTitle = styled.p`
   margin: 8px 0 0;
   font-size: 24px;

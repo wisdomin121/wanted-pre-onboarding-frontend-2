@@ -17,8 +17,8 @@ export const StyledItem = styled.button`
 export const StyledLeft = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
   gap: 5px;
+  width: 90%;
 `
 
 export const StyledRegularP = styled.p`
