@@ -21,6 +21,8 @@ function IssueList() {
             author={item.author}
             date={item.date}
             comments={item.comments}
+            body={item.body}
+            avatar={item.avatar}
           />
         ))
       ) : (

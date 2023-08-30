@@ -26,6 +26,7 @@ const useInfiniteScroll = (scrollRef: React.RefObject<HTMLDivElement>) => {
             date: item.created_at.slice(0, 10),
             comments: item.comments,
             body: item.body,
+            avatar: item.user.avatar_url,
           })
         })
 

@@ -5,4 +5,10 @@ export interface Item {
   date: string
   comments: number
   body: string
+  avatar: string
+}
+
+export interface Data {
+  data: Item
+  setData: (value: Item) => void
 }

@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { IssueListPage } from 'pages'
+import { IssueDetailPage, IssueListPage } from 'pages'
 
 function PageRouter() {
   return (
     <BrowserRouter>
       <Routes>
         <Route index element={<IssueListPage />} />
+        <Route path="/detail" element={<IssueDetailPage />} />
       </Routes>
     </BrowserRouter>
   )
