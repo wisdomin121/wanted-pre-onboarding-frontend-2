@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+# 원티드 프리온보딩 인턴십 프론트엔드 - 2주차 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+원티드 프리온보딩 인턴십 프론트엔드에서 2주차 과제로 진행한 **GITHUB ISSUE**프로젝트 입니다 :)
 
-## Available Scripts
+## 개발 기간
 
-In the project directory, you can run:
+2023.08.29 ~2023.09.01
 
-### `npm start`
+## 개발 환경
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img src="https://img.shields.io/badge/Node.js v18 (LTS)-grey?style=flat-square&logo=nodedotjs"> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white"/> <img src="https://img.shields.io/badge/styled component-DB7093?style=flat-square&logo=styled-components&logoColor=white"/> <img src="https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=Axios&logoColor=white"/> <img src="https://img.shields.io/badge/React Router-CA4245?style=flat-square&logo=React Router&logoColor=white"> <img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint"> <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=prettier&logoColor=white"> <img src="https://img.shields.io/badge/zustand-black?style=flat-square&logo=zustand&logoColor=white">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 프로젝트 실행 방법
 
-### `npm test`
+로컬에서 실행하고 싶으시다면 아래의 과정을 따라주시고,
+바로 페이지를 구경하고 싶다면 [여기](https://wanted-pre-onboarding-frontend-2-five.vercel.app/)를 클릭해 주세요 ~!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. clone 하기
 
-### `npm run build`
+   ```
+   git clone https://github.com/wisdomin121/wanted-pre-onboarding-frontend-2.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. npm 다운받기
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. .env 파일 생성하기  
+   안에 아래의 코드를 넣어주세요 !
 
-### `npm run eject`
+   ```
+   REACT_APP_GITHUB_ACCESS_TOKEN = "${본인의 깃헙 access_token}"
+   GENERATE_SOURCEMAP = false
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. 실행하기
+   ```
+   npm start
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 디렉토리 구조
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+📦src
+ ┣ 📂apis
+ ┃ ┣ 📜instance.ts
+ ┃ ┗ 📜issue.ts
+ ┣ 📂assets
+ ┃ ┣ 📜CaretLeft.svg
+ ┃ ┣ 📜Comments.svg
+ ┃ ┗ 📜NotFound.png
+ ┣ 📂components
+ ┃ ┣ 📂common
+ ┃ ┃ ┣ 📂Loading
+ ┃ ┃ ┃ ┣ 📜Loading.styled.tsx
+ ┃ ┃ ┃ ┗ 📜Loading.tsx
+ ┃ ┃ ┣ 📜Header.styled.tsx
+ ┃ ┃ ┗ 📜Header.tsx
+ ┃ ┣ 📂IssueDetail
+ ┃ ┃ ┣ 📜IssueDetail.styled.tsx
+ ┃ ┃ ┣ 📜IssueDetail.tsx
+ ┃ ┃ ┣ 📜IssueDetailContent.styled.tsx
+ ┃ ┃ ┣ 📜IssueDetailContent.tsx
+ ┃ ┃ ┣ 📜IssueDetailHeader.styled.tsx
+ ┃ ┃ ┗ 📜IssueDetailHeader.tsx
+ ┃ ┣ 📂IssueList
+ ┃ ┃ ┣ 📜IssueList.styled.tsx
+ ┃ ┃ ┣ 📜IssueList.tsx
+ ┃ ┃ ┣ 📜IssueListItem.styled.tsx
+ ┃ ┃ ┗ 📜IssueListItem.tsx
+ ┃ ┗ 📜index.ts
+ ┣ 📂data
+ ┃ ┣ 📜const.ts
+ ┃ ┗ 📜type.ts
+ ┣ 📂hooks
+ ┃ ┣ 📜index.ts
+ ┃ ┣ 📜useInfiniteScroll.ts
+ ┃ ┗ 📜useThrottle.ts
+ ┣ 📂pages
+ ┃ ┣ 📜index.ts
+ ┃ ┣ 📜IssuePage.tsx
+ ┃ ┣ 📜NotFoundPage.tsx
+ ┃ ┣ 📜PageRouter.tsx
+ ┃ ┗ 📜ServerErrorPage.tsx
+ ┣ 📂stores
+ ┃ ┣ 📜useContentStore.ts
+ ┃ ┗ 📜usePageStore.ts
+ ┣ 📜App.tsx
+ ┣ 📜index.css
+ ┣ 📜index.tsx
+ ┣ 📜react-app-env.d.ts
+ ┣ 📜reportWebVitals.ts
+ ┗ 📜setupTests.ts
+```
