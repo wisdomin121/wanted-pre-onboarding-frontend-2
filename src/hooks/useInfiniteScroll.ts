@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { AxiosError } from 'axios'
 
 import { getIssueList } from 'apis/issue'
+import { useThrottle } from 'hooks'
 import { PER_PAGE } from 'data/const'
 import { Item } from 'data/type'
 
@@ -39,7 +40,7 @@ const useInfiniteScroll = (scrollRef: React.RefObject<HTMLDivElement>) => {
       .catch((e: AxiosError) => alert(e.message))
   }, [page])
 
-  const handleScroll = () => {
+  const handleScroll = useThrottle(() => {
     if (scrollRef.current) {
       const { scrollTop, scrollHeight, offsetHeight } = scrollRef.current
 
@@ -47,7 +48,7 @@ const useInfiniteScroll = (scrollRef: React.RefObject<HTMLDivElement>) => {
         setIsFetching(true)
       }
     }
-  }
+  })
 
   useEffect(() => {
     if (scrollRef.current != null) {
