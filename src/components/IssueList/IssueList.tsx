@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { StyledAd, StyledList } from './IssueList.styled'
 
 import { useInfiniteScroll } from 'hooks'
-import { IssueListItem } from 'components'
+import { IssueListItem, Loading } from 'components'
 import { Item } from 'data/type'
 
 function IssueList() {
@@ -37,7 +37,7 @@ function IssueList() {
           </>
         ))
       ) : (
-        <p>Loading...</p>
+        <Loading />
       )}
     </StyledList>
   )
