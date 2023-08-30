@@ -8,3 +8,4 @@ export { default as IssueDetailHeader } from './IssueDetail/IssueDetailHeader'
 
 // IssueList
 export { default as IssueListItem } from './IssueList/IssueListItem'
+export { default as IssueList } from './IssueList/IssueList'
