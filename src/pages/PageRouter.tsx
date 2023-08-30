@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { IssueDetailPage, IssueListPage } from 'pages'
+import { IssueDetailPage, IssueListPage, NotFoundPage } from 'pages'
 
 function PageRouter() {
   return (
@@ -7,6 +7,7 @@ function PageRouter() {
       <Routes>
         <Route index element={<IssueListPage />} />
         <Route path="/detail" element={<IssueDetailPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   )
