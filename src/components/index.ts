@@ -1,5 +1,6 @@
 // common
 export { default as Header } from './common/Header'
+export { default as Loading } from './common/Loading/Loading'
 
 // IssueDetail
 export { default as IssueDetailContent } from './IssueDetail/IssueDetailContent'
