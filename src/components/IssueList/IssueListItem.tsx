@@ -1,7 +1,7 @@
 import useContentStore from 'stores/useContentStore'
 import { StyledItem, StyledLeft, StyledRegularP, StyledSmallP } from './IssueListItem.styled'
 import { ReactComponent as Comments } from 'assets/Comments.svg'
-import { useNavigate } from 'react-router-dom'
+import usePageStore from 'stores/usePageStore'
 
 interface ItemProps {
   issueNumber: number
@@ -22,12 +22,12 @@ function IssueListItem({
   body,
   avatar,
 }: ItemProps) {
+  const { setIsList } = usePageStore()
   const { setData } = useContentStore()
-  const navigate = useNavigate()
 
   const storeData = () => {
     setData({ issueNumber, issueTitle, author, date, comments, body, avatar })
-    navigate('/detail')
+    setIsList(false)
   }
 
   return (

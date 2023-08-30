@@ -2,10 +2,12 @@ import { useRef } from 'react'
 import { StyledAd, StyledList } from './IssueList.styled'
 
 import { useInfiniteScroll } from 'hooks'
-import { IssueListItem, Loading } from 'components'
+import { IssueDetail, IssueListItem, Loading } from 'components'
 import { Item } from 'data/type'
+import usePageStore from 'stores/usePageStore'
 
 function IssueList() {
+  const { isList } = usePageStore()
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const list = useInfiniteScroll(scrollRef)
@@ -38,6 +40,8 @@ function IssueList() {
         ))}
 
       <Loading />
+
+      {!isList && <IssueDetail />}
     </StyledList>
   )
 }

@@ -2,9 +2,9 @@ import { create } from 'zustand'
 import { immer } from 'zustand/middleware/immer'
 import { devtools } from 'zustand/middleware'
 
-import type { Data } from 'data/type'
+import type { Content } from 'data/type'
 
-const useContentStore = create<Data>()(
+const useContentStore = create<Content>()(
   devtools(
     immer((set) => ({
       data: {

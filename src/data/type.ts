@@ -8,7 +8,12 @@ export interface Item {
   avatar: string
 }
 
-export interface Data {
+export interface Content {
   data: Item
   setData: (value: Item) => void
+}
+
+export interface Page {
+  isList: boolean
+  setIsList: (value: boolean) => void
 }
